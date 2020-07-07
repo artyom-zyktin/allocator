@@ -327,3 +327,7 @@ __pycache__/
 
 # BizTalk build output
 
+allocator.cpp
+allocator.sln
+allocator.vcxproj
+allocator.vcxproj.filters
