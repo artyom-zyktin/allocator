@@ -9,7 +9,6 @@ namespace az
 	class Timer
 	{
 	public:
-
 		using ns = std::chrono::nanoseconds;
 		using mcs = std::chrono::microseconds;
 		using ms = std::chrono::milliseconds;
@@ -28,6 +27,7 @@ namespace az
 
 			return std::chrono::duration_cast<_Scale>(_HRC::now() - _start).count();
 		}
+
 	protected:
 		using _HRC = std::chrono::high_resolution_clock;
 		using _TP  = std::chrono::high_resolution_clock::time_point;
