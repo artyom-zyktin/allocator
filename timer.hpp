@@ -8,16 +8,16 @@ namespace az
 {
 
 	class Timer
-	{
+    {
+        Timer() = delete;
+        Timer(Timer&) = delete;
+        Timer(Timer&&) = delete;
+
 	public:
 		using ns = std::chrono::nanoseconds;
 		using mcs = std::chrono::microseconds;
 		using ms = std::chrono::milliseconds;
-		using s = std::chrono::seconds;
-
-		Timer() = delete;
-		Timer(Timer&) = delete;
-		Timer(Timer&&) = delete;
+        using s = std::chrono::seconds;
 
 		template <class _Scale, class _T, class... _Args>
 		static long long timer(_T caller, _Args&&... args)
