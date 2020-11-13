@@ -24,12 +24,12 @@ namespace az {
         template<class T, class... Args>
         T* emplace(Args&&... args)
         {
-            size_t _Tsize = sizeof(T);
+            size_t Tsize = sizeof(T);
 
-            if (_size() < _Tsize) throw EmplacingException();
+            if (_size() < Tsize) throw EmplacingException();
 
             T* res = new (_head) T (std::forward<Args>(args)...);
-            _head += _Tsize;
+            _head += Tsize;
 
             return res;
         }
